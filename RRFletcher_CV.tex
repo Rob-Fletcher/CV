@@ -5,6 +5,10 @@
 
 \documentclass[a4paper,10pt]{article} % Default font size and paper size
 
+\usepackage{multirow}
+\usepackage{longtable}
+
+\usepackage[bottom=7mm,top=10mm]{geometry}
 %\usepackage{fontspec} % For loading fonts
 %\defaultfontfeatures{Mapping=tex-text}
 %\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
@@ -13,7 +17,7 @@
 
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
 
-\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
 % To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
 
 \usepackage{hyperref} % Required for adding links	and customizing them
@@ -22,7 +26,7 @@
 
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+\titlespacing{\section}{0pt}{2pt}{2pt} % Spacing around sections
 
 \begin{document}
 
@@ -35,15 +39,19 @@
 %----------------------------------------------------------------------------------------
 
 \par{\centering{\Huge Rob Roy \textsc{Fletcher}}\bigskip\par} % Your name
+\begin{centering}
+\begin{tabular}{ l | c | c | r}
+Redlands, CA   &  +1 951 858 2459   &   \href{mailto:rfletcher@seerai.space}{rfletcher@seerai.space} & \href{www.robroyfletcher.com}{www.robroyfletcher.com}
+\end{tabular} \par
+\end{centering}
 
-\section{Personal Data}
+\vspace{5mm}
+I am an experienced data scientist with a background in experimental physics. I love to tackle new challenges and learn new 
+skills. I have experience working in many different types of analysis and data science as well as leading teams of data 
+scientists in delivering solutions.
+\vspace{3mm}
 
-\begin{tabular}{rl}
-\textsc{Place and Date of Birth:} & U.S.A  | 03 March 1984 \\
-\textsc{Address:} & 177 Gay St., Philadelphia, Pennsylvania, U.S.A. \\
-\textsc{Phone:} & +1 951 858 2459\\
-\textsc{email:} & \href{mailto:rob.fletcher@cern.ch}{rob.fletcher@cern.ch}
-\end{tabular}
+
 
 
 %----------------------------------------------------------------------------------------
@@ -53,22 +61,53 @@
 \section{Education}
 
 \begin{tabular}{rl}
+\textsc{Aug 2018} & Ph.D. Experimental High Energy Physics, \textbf{The University of Pennsylvania}, \\
+                          & Philadelphia \\
+&\small Advisor: Prof. I. Joseph \textsc{Kroll}\\
+\vspace{1mm}
+
+%---------------------------------------------------
+
 \textsc{May} 2014 & Master of Science in \textsc{Physics}, \textbf{The University of Pennsylvania}, Philadelphia\\
 &\small Advisor: Prof. I. Joseph \textsc{Kroll}\\
-&\normalsize \textsc{Gpa}: 3.88/4.0\\
-&\\
+\vspace{1mm}
 
 %------------------------------------------------
 
 \textsc{June} 2012& Bachelor of Science in \textsc{}\textsc{Physics and Applied Mathematics} \\
 &Cum Laude | \normalsize\textbf{The University of California}, Riverside\\
 &\small Advisor: Prof. Gail \textsc{Hanson}\\
-&\normalsize \textsc{Gpa}: 3.73/4.0 \\
-&\\
-
 %------------------------------------------------
 
 \end{tabular}
+\vspace{0mm}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+
+Experience writing code for large frameworks used in scientific computing. Building ML/DL pipelines for distributed systems in production environments.
+
+\begin{tabular}{rl}
+
+Advanced Knowledge: & Go, Python, C++, Pytorch, Scikit-learn, Docker, Kubernetes, Linux  \\
+Basic Knowledge: & HTML, CSS, Javascript, React\\  
+\end{tabular}
+\vspace{1mm}
+
+%----------------------------------------------------------------------------------------
+%	Hardware Skills
+%----------------------------------------------------------------------------------------
+
+\section{Hardware Skills}
+Knowledge and experience with 3D printing, rapid prototyping and GCode. Using 3D modeling\\
+software, I have designed, produced and tested components and assemblies.\\
+Experience with digital and analogue circuits including several common microcontrollers (Arduino, Basic Series, Atmel chips) \\
+\vspace{0mm}
+
+%----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
@@ -76,55 +115,65 @@
 
 \section{Work Experience}
 
-\begin{tabular}{r|p{11cm}}
-\emph{Current}    & Ph.D. student at \textsc{University of Pennsylvania}, Philadelphia \\
-\textsc{July 2012} & \emph{Student Researcher on ATLAS Experiment}\\
+\begin{longtable}{r|p{11cm}}
+%---------------------------------------------------------------------
+
+\emph{Current}    & Chief Scientist \& Co-Founder - \textsc{SeerAI} \\
+\textsc{Jan 2021} 
+                & \begin{itemize}
+					 \footnotesize{
+						\item Lead data science and innovation team.
+                        \item Design and build software and frameworks for ML and Geospatial computing.
+					 }
+					 \end{itemize} \\
+\multicolumn{2}{c}{} \\
+%\end{tabular}
+%---------------------------------------------------------------
+\textsc{Aug 2018-Jan 2021}  & Senior Data Scientist - \textsc{Esri}, Redlands, CA \\
 				   & \begin{itemize}
 					 \footnotesize{
-						\item My dissertation work focuses on a search for low-mass di-photon resonances using the two Higgs doublet model as a benchmark.
-						\item As part of the E/Gamma group, on electron identification, I develed methods and software for a likelihood based ID and analysis.
-						\item I was responsible for development of several combined performance tools and their integration into the ATLAS Event Data Model.
-						\item TA duties including grading and teaching undergraduate physics laboratories.
+						\item Technical leadership for the data science team in Professional Services.
+                        \item Build and deliver high quality analyses and applications through consulting engagements
+                        \item ML/AI subject matter expert and Tech lead for long term client projects.
 					 }
 					 \end{itemize} \\
 \multicolumn{2}{c}{} \\
 
-%------------------------------------------------
+%---------------------------------------------------------------------
 
-\textsc{March 2010-June 2012} & Undergraduate Researcher at \textsc{University of California}, Riverside \emph{}\\
+\textsc{July 2012-Aug 2018} & Research Assistant - \textsc{University of Pennsylvania}, Philadelphia  \\
+          & \textsc{Cern}, Geneva, Switzerland \\
+\textsc{} & \emph{Researcher on ATLAS Experiment}\\
+				   & \begin{itemize}
+					 \footnotesize{
+						\item My dissertation work focused on a search for low-mass di-photon resonances using the two Higgs doublet model as a benchmark.
+            \item Developed new background modeling technique based on Gaussian Process Regression and integrate it into a statistical model.
+            \item Automated the validation of dataset transformations with web based reporting.
+						\item I developed methods and software for a likelihood based classification and analysis.
+						\item TA duties including grading and teaching undergraduate physics laboratories.
+					 }
+					 \end{itemize} \\
+\multicolumn{2}{c}{} \\
+%\end{tabular}
+
+%------------------------------------------------
+\pagebreak
+%\begin{tabular}{r|p{11cm}}
+\textsc{March 2010-June 2012} & Undergraduate Researcher - \textsc{University of California}, Riverside \emph{}\\
 				  & \begin{itemize}
 					\footnotesize{
 						\item Performed analysis on data collected by the Muon Ionization Cooling Experiment (MICE), both onsite at the Rutherford Appleton Laboratory (RAL) in Didcot, UK, and remotely from Riverside, CA
-						\item Worked mainly on studying the contamination of neutral particles in the muon beam.
-					    \item Developed software for the MAUS data analysis framework.  Worked on several parts of analysis code as well as a majority of the code that runs a set of three Time-of-Flight detectors.
+						\item Studied the contamination of neutral particles in the muon beam.
+					  \item Developed software for the MAUS data analysis framework.  Worked on several parts of analysis code as well as a majority of the code that runs a set of three Time-of-Flight detectors.
 						\item Worked on data collection shifts in the MICE control room at RAL.
-						\item Awarded the UCR Dean’s Fellowship to fund research on MICE.
 					}
 			        \end{itemize} \\
 \multicolumn{2}{c}{} \\
+%\end{tabular}
 
 %------------------------------------------------
 
-\textsc{Jan-Mar 2011} & Suplemental Instructor, \textsc{Riverside Community College, STEM Center}, Riverside, CA \emph{}\\
-		& \begin{itemize}
-			\footnotesize{
-				\item Supplemental Instructor for PHYS-4A – Classical Mechanics
-				\item Responsible for 3 hours of lecture per week
-   				\item Assisted with running the laboratory sessions
-			}
-          \end{itemize}
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	Presentations
-%----------------------------------------------------------------------------------------
-
-\section{Presentations}
-
-\begin{tabular}{rl}
-\textsc{Aug.} 2014  & \textbf{Electron ID in Run 2}, US ATLAS meeting, Seattle, WA \\
-\end{tabular}
-
+\end{longtable}
 
 %----------------------------------------------------------------------------------------
 %	Selected Publications
@@ -133,99 +182,19 @@
 \section{Selected Publications}
 
 \begin{tabular}{rl}
-\textsc{July} 2017 & \textbf{Search for new phenomena in high-mass diphoton final states}
-									 & \textbf{using 37 fb−1 of proton-proton collisions collected at s√=13 TeV with the ATLAS detector}
+\textsc{July} 2017 & \textbf{Search for new phenomena in high-mass diphoton final states}\\
+									 & \textbf{using 37 fb−1 of proton-proton collisions collected at s√=13 TeV with the ATLAS detector}\\
 									 & The ATLAS collaboration  \\
 									 & Phys. Lett. B 775 (2017) 105 \\
 									 & arXiv:1707.04147 [hep-ex]  \\
-\textsc{Sept.} 2016 & \textbf{Search for resonances in diphoton events at $\sqrt{s}$=13 TeV} \\
-									& \textbf{with the ATLAS detector} \\
-									& The ATLAS collaboration  \\
-									& J. High Energ. Phys. (2016) 2016: 1. doi:10.1007/JHEP09(2016)001 \\
-									& arXiv:1606.03833v1 [hep-ex] \\
-\textsc{Jun.} 2016 & \textbf{Electron efficiency measurements with the ATLAS detector} \\
-									& \textbf{using the 2015 LHC proton-proton collision data} \\
+\textsc{Jun.} 2016 & \textbf{Electron efficiency Measurements with the ATLAS Detector} \\
+									& \textbf{using the 2015 LHC proton-proton collision data}, \\
 									& ATLAS Collaboration, 51st Rencontres de Moriond on QCD \\
 									& and High Energy Interactions, La Thuile, Italy, \\
 									& https://cds.cern.ch/record/2157687 \\
-\textsc{Oct.} 2015 & \textbf{Search for extra dimensions using diphoton events in} \\
-									 & \textbf{13 TeV proton-proton collisions with the ATLAS detector:} \\
-									 & \textbf{supporting document for the first analysis at 13 TeV} \\
-									 & Leonardo Carminati et al, ATLAS Note \\
-\textsc{May} 2012  & \textbf{The MICE Muon Beam on ISIS and the beam-line Instrumentation} \\
-                   & \textbf{of the Muon Ionization Cooling Experiment}, M. Bogomilov et al., Journal of \\
-				   & Instrumentation 2012 JINST 7 P05009, arXiv:1203.4089 \\
-\textsc{Sept.} 2011 & \textbf{Proton Contamination Studies in the Muon Ionization Cooling Experiment} \\
-					& S. Blot, Y.K. Kim, R.R. Fletcher, D. Kaplan, C. Rogers, Proceedings of the International \\
-					& Particle Accelerator Conference 2011, San Sebastian, Spain \\
-\textsc{March} 2011 & \textbf{Measurement of Neutral Particle Contamination in the MICE Muon Beam}\\
-					& R. Fletcher, L. Coney, G. Hanson, Published in the Proceedes of the Particle \\
-                    & Accelerator Conference 2011, New York, NY, arXiv:1105.0645\\
 
 \end{tabular}
+\vspace{3mm}
 
-%----------------------------------------------------------------------------------------
-%	Awards
-%----------------------------------------------------------------------------------------
-
-\section{Awards}
-
-\begin{tabular}{rl}
-\textsc{Sept.} 2016 & \textbf{3rd Place Overall and Taser/Axon sponsor prize for Best Public Safety} \\
-					& \textbf{ and Video Processing App} for a user and object relative tracking transparent \\
-					& heads up display (eyeHUD, http://devpost.com/software/eyehud). \\
-\textsc{Jan.} 2016  & \textbf{1st Place PennAppsXIII} for implementation of an RF communication \\
- 					& using motherboard RAM bus. \\
-\textsc{Sept.} 2015 & \textbf{The Chairmans Teaching Award}, University of Pennsylvania \\
-\textsc{June} 2012  & \textbf{Science Circle Award of Excelence}, University of California, Riverside \\
-\textsc{May} 2012   & \textbf{Academic Excelence Award in Physics}, University of California, Riverside \\
-\textsc{Sept.} 2011 & \textbf{Student Travel Grant}, International Particle Accelerator Conference \footnotesize(\$1,600)\normalsize\\
-\textsc{May} 2010   & \textbf{Dean's Fellowship}, University of California, Riverside, College of Natural\\
-				    & and Agricultural Sciences \footnotesize(\$2,000)\normalsize\\
-\textsc{May} 2009   & \textbf{Summer Bridge to Research Grant}, University of California, Riverside, \\
-			        & College of Natural and Agricultural Sciences \footnotesize(\$2,000)\normalsize\\
-
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS
-%----------------------------------------------------------------------------------------
-
-\section{Computer Skills}
-
-\begin{tabular}{rl}
-
-Advanced Knowledge: & C++, Python, ROOT and PyROOT, Linux and Unix Systems \\
-Intermediate Knowledge: & HTML, Javascript, CSS, SQL, NodeJS, LabView, AutoCAD, \LaTeX, \\
-Basic Knowledge:        & PHP
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	Hardware Skills
-%----------------------------------------------------------------------------------------
-
-\section{Hardware Skills}
-
-Experience with Digital and Analogue circuits including several common microcontrollers (Arduino, Basic Series, Atmel chips) \\
-Manual Machining Techniques (Mill, Lathe, etc.) TIG and MIG welding\\
-
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGES
-%----------------------------------------------------------------------------------------
-
-\section{Languages}
-
-\begin{tabular}{rl}
-\textsc{English:} & Native\\
-
-\textsc{French:} & Basic \\
-\end{tabular}
-
-\newpage
-
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
